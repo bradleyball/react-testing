@@ -8,6 +8,7 @@ Enzyme.configure({ adapter: new EnzymeAdapter() });
 test("renders without crashing", () => {
   const wrapper = shallow(<App />);
   const appComponent = wrapper.find("[data-test='component-app']");
+  expect(appComponent.length).toBe(1);
 });
 
 test("renders increment button", () => {});
