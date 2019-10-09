@@ -2,7 +2,11 @@ import React from "react";
 
 class App extends React.Component {
   render() {
-    return <div className="App">Heyy</div>;
+    return (
+      <div className="App" data-test="component-app">
+        Heyy
+      </div>
+    );
   }
 }
 
