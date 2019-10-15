@@ -15,7 +15,7 @@ const defaultProps = {
  */
 
 const setup = (props = {}) => {
-  setupProps = { ...defaultProps, ...props };
+  const setupProps = { ...defaultProps, ...props };
   return shallow(<GuessedWords {...setupProps} />);
 };
 
@@ -24,7 +24,11 @@ test("does not throw warning with expected props", () => {
 });
 
 describe("if there are no words guessed", () => {
-  test("renders without error", () => {});
+  test("renders without error", () => {
+    const wrapper = setup({ guessedWords: [] });
+    const component = findByTestAttr(wrapper, "component-guessed-words");
+    expect(component.length).toBe(1);
+  });
   test("renders instructions to guess a word", () => {});
 });
 
