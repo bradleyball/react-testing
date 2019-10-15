@@ -5,6 +5,10 @@ import App from "./App";
 
 Enzyme.configure({ adapter: new EnzymeAdapter() });
 
+const setup = (props = {}, state = null) => {
+  return shallow(<App {...props} />);
+};
+
 test("renders without crashing", () => {
   const wrapper = shallow(<App />);
   const appComponent = wrapper.find("[data-test='component-app']");
