@@ -41,7 +41,6 @@ describe("if there are no words guessed", () => {
 describe("If there are words guessed", () => {
   let wrapper;
   let guessedWords = [
-    ,
     { guessedWord: "train", letterMatchCount: 3 },
     { guessedWord: "yes", letterMatchCount: 2 },
     { guessedWord: "hey", letterMatchCount: 1 }
@@ -56,11 +55,11 @@ describe("If there are words guessed", () => {
   });
 
   test("renders guessed words section", () => {
-    const guessedWordsNode = findByTestAttr(wrapper, "guess-words");
+    const guessedWordsNode = findByTestAttr(wrapper, "guessed-words");
     expect(guessedWordsNode.length).toBe(1);
   });
   test("correct number of guessed words", () => {
-    const guessedWordsNodes = findByTestAttr(wrapper, "guess-word");
-    expect(guessedWordsNodes.length).toBe(guessedWords.length);
+    const guessedWordNodes = findByTestAttr(wrapper, "guessed-word");
+    expect(guessedWordNodes.length).toBe(guessedWords.length);
   });
 });
