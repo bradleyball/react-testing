@@ -44,4 +44,5 @@ test("does not throw warning with expected props", () => {
     "props",
     Congrats.name
   );
+  expect(propError).toBeUndefined();
 });
