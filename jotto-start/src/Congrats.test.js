@@ -1,11 +1,9 @@
 import React from "react";
-import Enzyme, { shallow } from "enzyme";
-import EnzymeAdapter from "enzyme-adapter-react-16";
+import { shallow } from "enzyme";
 import Congrats from "./Congrats";
 import { findByTestAttr, checkProps } from "../test/testUtils";
-import checkPropTypes from "check-prop-types";
 
-Enzyme.configure({ adapter: new EnzymeAdapter() });
+const defaultProps = { success: false };
 
 /**
  * Factory function to create a ShallowWrap for the Congrats component
@@ -15,11 +13,12 @@ Enzyme.configure({ adapter: new EnzymeAdapter() });
  */
 
 const setup = (props = {}) => {
-  return shallow(<Congrats {...props} />);
+  const setupProps = { ...defaultProps, ...props };
+  return shallow(<Congrats {...setupProps} />);
 };
 
 test("renders without error", () => {
-  const wrapper = setup();
+  const wrapper = setup({ success: false });
   const component = findByTestAttr(wrapper, "component-congrats");
   expect(component.length).toBe(1);
 });
