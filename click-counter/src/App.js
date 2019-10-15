@@ -4,7 +4,8 @@ class App extends React.Component {
   render() {
     return (
       <div className="App" data-test="component-app">
-        Heyyy
+        <h1 data-test="counter-display">0</h1>
+        <button data-test="increment-button">+</button>
       </div>
     );
   }
