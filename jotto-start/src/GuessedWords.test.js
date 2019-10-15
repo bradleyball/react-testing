@@ -45,6 +45,10 @@ describe("If there are words guessed", () => {
     { guessedWord: "yes", letterMatchCount: 2 },
     { guessedWord: "hey", letterMatchCount: 1 }
   ];
+
+  beforeEach(() => {
+    wrapper = setup({ guessedWords });
+  });
   test("renders without error", () => {});
 
   test("renders guessed words section", () => {});
