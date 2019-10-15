@@ -23,6 +23,9 @@ test("does not throw warning with expected props", () => {
   checkProps(GuessedWords, defaultProps);
 });
 
-describe("if there are no words guessed", () => {});
+describe("if there are no words guessed", () => {
+  test("renders without error", () => {});
+  test("renders instructions to guess a word", () => {});
+});
 
 describe("If there are words guessed", () => {});
