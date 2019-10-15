@@ -38,4 +38,15 @@ describe("if there are no words guessed", () => {
   });
 });
 
-describe("If there are words guessed", () => {});
+describe("If there are words guessed", () => {
+  let guessedWords = [
+    ,
+    { guessedWord: "train", letterMatchCount: 3 },
+    { guessedWord: "yes", letterMatchCount: 2 },
+    { guessedWord: "hey", letterMatchCount: 1 }
+  ];
+  test("renders without error", () => {});
+
+  test("renders guessed words section", () => {});
+  test("correct number of guessed words", () => {});
+});
