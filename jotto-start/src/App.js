@@ -7,7 +7,7 @@ class App extends React.Component {
     return (
       <div className="container">
         <h1>Jotto</h1>
-        <Congrats success={false}></Congrats>
+        <Congrats success={true}></Congrats>
         <GuessedWords
           guessedWords={[{ guessedWord: "train", letterMatchCount: 3 }]}
         ></GuessedWords>
