@@ -39,6 +39,7 @@ describe("if there are no words guessed", () => {
 });
 
 describe("If there are words guessed", () => {
+  let wrapper;
   let guessedWords = [
     ,
     { guessedWord: "train", letterMatchCount: 3 },
