@@ -35,10 +35,13 @@ describe("render", () => {
       expect(component.length).toBe(1);
     });
     test("does not renders input box", () => {
-      const inputBox = findByTestAttr(wrapper, "input-bod");
+      const inputBox = findByTestAttr(wrapper, "input-box");
       expect(inputBox.length).toBe(1);
     });
-    test("does not renders submit button", () => {});
+    test("does not renders submit button", () => {
+      const submitButton = findByTestAttr(wrapper, "submit-button");
+      expect(submitButton.length).toBe(1);
+    });
   });
 });
 
