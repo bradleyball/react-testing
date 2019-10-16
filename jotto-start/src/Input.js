@@ -1,8 +1,7 @@
 import React from "react";
-import { conenct } from "react-redux";
-import { connect } from "net";
+import { connect } from "react-redux";
 
-class Input extends Component {
+class Input extends React.Component {
   render() {
     return <div />;
   }
