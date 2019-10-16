@@ -25,7 +25,15 @@ describe("render", () => {
     test("renders submit button", () => {});
   });
   describe("word has been guessed", () => {
-    test("renders component without error", () => {});
+    let wrapper;
+    beforeEach(() => {
+      const initialState = { success: false };
+      wrapper = setup(initialState);
+    });
+    test("renders component without error", () => {
+      const component = findByTestAttr(wrapper, "component-wrapper");
+      expect(component).toBe(1);
+    });
     test("does not renders input box", () => {});
     test("does not renders submit button", () => {});
   });
