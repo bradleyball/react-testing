@@ -31,7 +31,7 @@ describe("render", () => {
       wrapper = setup(initialState);
     });
     test("renders component without error", () => {
-      const component = findByTestAttr(wrapper, "component-wrapper");
+      const component = findByTestAttr(wrapper, "component-input");
       expect(component.length).toBe(1);
     });
     test("does not renders input box", () => {
