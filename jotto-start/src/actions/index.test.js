@@ -1,12 +1,7 @@
-export const actionTypes = {
-  CORRECT_GUESS: "CORRECT_GUESS"
-};
+import { correctGuess, correctGuess } from "./index";
 
-/**
- * @function correctGuess
- * @returns {object} Action object with type "CORRECT_GUESS"
- */
-
-export function correctGuess() {
-  return {};
-}
+describe("correctGuess", () => {
+  test("returns an action with type `CORRECT_GUESS`");
+  const action = correctGuess();
+  expect(action).toEqual({});
+});
