@@ -32,9 +32,12 @@ describe("render", () => {
     });
     test("renders component without error", () => {
       const component = findByTestAttr(wrapper, "component-wrapper");
-      expect(component).toBe(1);
+      expect(component.length).toBe(1);
     });
-    test("does not renders input box", () => {});
+    test("does not renders input box", () => {
+      const inputBox = findByTestAttr(wrapper, "input-bod");
+      expect(inputBox.length).toBe(1);
+    });
     test("does not renders submit button", () => {});
   });
 });
