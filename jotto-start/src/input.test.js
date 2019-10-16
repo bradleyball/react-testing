@@ -3,6 +3,20 @@ import { shallow } from "enzyme";
 import { findByTestAttr } from "../test/testUtils";
 import Input from "./Input";
 
+/**
+ * Factory function to create a ShallowWrapper for the GuessedWords component
+ * @function setup
+ * @param {object} initialState
+ * @returns {ShallowWrapper}
+ */
+
+const setup = (initialState = {}) => {
+  const wrapper = shallow(<Input />);
+  console.log(wrapper.debug());
+};
+
+setup();
+
 describe("render", () => {
   describe("word has not been guessed", () => {
     test("renders component without error", () => {});
