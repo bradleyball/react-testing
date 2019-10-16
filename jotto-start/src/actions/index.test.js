@@ -1,7 +1,7 @@
-import { correctGuess, correctGuess } from "./index";
+import { correctGuess, correctGuess, actionTypes } from "./index";
 
 describe("correctGuess", () => {
   test("returns an action with type `CORRECT_GUESS`");
   const action = correctGuess();
-  expect(action).toEqual({});
+  expect(action).toEqual({ type: actionTypes.CORRECT_GUESS });
 });
