@@ -1,5 +1,4 @@
 import { getLetterMatchCount } from "./index";
-import { findByTestAttr, storeFactory } from "../../test/testUtils";
 
 describe("getLetterMatchCount", () => {
   const secretWord = "party";
